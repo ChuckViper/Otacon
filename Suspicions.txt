@@ -1,0 +1,31 @@
+//horse Object
+function Horse(name) {
+  this.name = name;
+  this.position = 0;
+  this.icon = "";
+  this.fromStart = "";
+  this.fromStartNum = 0;
+  this.toFinish = "";
+  this.toFinishNum = 10;
+} // end Horse
+
+//Get random Number
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+
+  //Voice Channel Kentucky Derby Soundbyte
+
+
+
+getTweets(userID).then(data => {
+  tweetData = data.JSON
+  strTweetData = JSON.stringify(tweetData)
+  let arrTweets = [] 
+  for(let i = 0; i < 3; i++) {
+    arrTweets[i] = JSON.parse(strTweetData).data[i].text
+    console.log(arrTweets[i])
+  } // end for
+  msg.channel.send("Here are " + username + "'s most recent tweets. \n \n" + //tweets[0] + "\n \n" + tweets[1] + "\n \n" + tweets[2])
+ 
